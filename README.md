@@ -28,8 +28,9 @@ One line per folder. "Manifest row" is the row in Neon Rain's `data/MANIFEST.md`
 
 ## Rules
 
-1. **Files are never edited in place.** A change is a new file and a new hash on a new manifest row (or
-   a changed row, in Neon Rain, in the same step). Every run checks the manifest's hash.
+1. **Files are never edited in place.** A change is a new file, or a dataset rebuilt by its script; the
+   bytes here change only that way, and Neon Rain's manifest row takes the new hash in the same step,
+   naming the decision that moved it (R-026 rebuilt one year this way). Every run checks the hash.
 2. **Every file is under 100 MB** (R-016 (a)); chunk larger data by year or by ticker range.
 3. **No code lives here.** No scripts, workflows, hooks or config. Scripts that read or write this
    data are in Neon Rain (`scripts/fetch/`).

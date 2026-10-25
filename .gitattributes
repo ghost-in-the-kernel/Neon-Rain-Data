@@ -1,0 +1,3 @@
+*.parquet binary
+*.part-* binary
+*.tsv text eol=lf
